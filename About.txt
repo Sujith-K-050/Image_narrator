@@ -1,0 +1,81 @@
+Sujith's Final year Project
+
+A detailed explanation of project description, breaking down each part for better understanding:
+
+🔍 
+What the Project Does
+
+
+This project is a web-based application that turns an uploaded image into a poetic or descriptive text using AI. It mimics how a human might look at a picture and creatively describe or write about it.
+
+🖼️ 
+Frontend
+User uploads an image through the frontend (built with React and TypeScript).
+
+The frontend sends this image to the backend via an API request.
+
+🧠 
+Backend (FastAPI + Python)
+
+
+Once the image reaches the backend:
+
+YOLOv8 (a CNN - Convolutional Neural Network)
+
+Detects and labels objects in the image (like car, person, dog, etc.).
+
+It’s fast and accurate for real-time object detection.
+
+CLIP model (Vision Transformer)
+
+Understands the context or scene of the image.
+
+It’s not just about “what’s in the image” but “what’s happening or what the image feels like.”
+
+🎨 
+Prompt Creation
+Based on the object labels (from YOLO) and scene (from CLIP), your code generates a creative prompt.
+
+Example:
+
+“Write a poem that describes a busy street filled with people, cars, and neon lights at night.”
+
+This prompt is sent to ChatGPT API (GenAI).
+
+✍️ 
+Text Generation
+ChatGPT processes the prompt and responds with a poem or creative text based on the image.
+
+The generated text is then returned to the frontend and shown to the user.
+
+🛠️ 
+Tech Stack Summary
+Layer
+
+Tools Used
+
+Frontend                                   
+
+React, TypeScript
+
+Backend
+
+Python, FastAPI
+
+AI Models
+
+YOLOv8 (object detection), CLIP (scene analysis)
+
+AI Text Gen
+
+ChatGPT API
+
+Integration
+
+REST APIs, JSON-based communication 
+
+
+✅ Final Outcome
+
+
+The user uploads a picture → AI analyzes it → A creative description or poem is shown — like giving a voice to the image.
